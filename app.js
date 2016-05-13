@@ -3,6 +3,7 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var cookieSession = require('cookie-session');
 var bodyParser = require('body-parser');
 var fs = require('fs');
 
@@ -44,10 +45,10 @@ if (app.get('env') === 'test') {
 } else {
   app.use(logger('dev'));
 }
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cookieSession({ name: 'session', keys: ['key1', 'key2'] }));
 app.use(express.static(path.join(__dirname, 'dist/public')));
 app.use(express.static(path.join(__dirname,
   'vendor', 'govuk_template_mustache_inheritance', 'assets')));

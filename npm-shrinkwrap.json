@@ -138,6 +138,30 @@
         }
       }
     },
+    "cookie-session": {
+      "version": "2.0.0-alpha.1",
+      "from": "cookie-session@latest",
+      "resolved": "https://registry.npmjs.org/cookie-session/-/cookie-session-2.0.0-alpha.1.tgz",
+      "dependencies": {
+        "cookies": {
+          "version": "0.5.1",
+          "from": "cookies@0.5.1",
+          "resolved": "https://registry.npmjs.org/cookies/-/cookies-0.5.1.tgz",
+          "dependencies": {
+            "keygrip": {
+              "version": "1.0.1",
+              "from": "keygrip@>=1.0.0 <1.1.0",
+              "resolved": "https://registry.npmjs.org/keygrip/-/keygrip-1.0.1.tgz"
+            }
+          }
+        },
+        "on-headers": {
+          "version": "1.0.1",
+          "from": "on-headers@>=1.0.1 <1.1.0",
+          "resolved": "https://registry.npmjs.org/on-headers/-/on-headers-1.0.1.tgz"
+        }
+      }
+    },
     "debug": {
       "version": "2.2.0",
       "from": "https://registry.npmjs.org/debug/-/debug-2.2.0.tgz",

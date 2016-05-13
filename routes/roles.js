@@ -10,7 +10,13 @@ router.get('/new', function newRole(req, res) {
 });
 
 router.post('/', function create(req, res) {
-  // TODO: Save role somewhere
+  /* eslint no-param-reassign: "off" */
+  req.session.roles = req.session.roles || [];
+  req.session.roles.push({
+    title: req.body['role[title]'],
+    employer: req.body['role[employer]'],
+    status: 'Interested'
+  });
   res.redirect('/');
 });
 

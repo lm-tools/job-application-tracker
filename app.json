@@ -1,0 +1,7 @@
+{
+  "name": "job-application-tracker",
+  "repository": "https://github.com/lm-tools/job-application-tracker",
+  "buildpacks": [
+    { "url": "  heroku/nodejs" }
+  ]
+}

@@ -1,0 +1,27 @@
+{{<layout}}
+
+  {{$applicationContent}}
+
+    <h2 class="heading-xlarge">Track your applications</h2>
+
+    <p class="lede text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+    <form action="/roles" method="POST">
+      <div class="form-group">
+        <label class="form-label" for="role-title">Role title</label>
+        <input class="form-control" id="role-title" type="text" name="role[title]">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="role-employer">Employer</label>
+        <input class="form-control" id="role-employer" type="text" name="role[employer]">
+      </div>
+      <div class="form-group">
+        <input type="submit" class="button" value="Save">
+      </div>
+    </form>
+
+    <p><a href="/" class="link-back">Back</a></p>
+
+  {{/applicationContent}}
+
+{{/layout}}

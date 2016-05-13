@@ -1,2 +1,43 @@
 @import '_govuk-elements';
 
+$space_size: 10px;
+
+.box {
+  border: 1px solid $panel-colour;
+  padding: (18px $gutter $gutter-half $gutter*1.8);
+
+  margin-bottom: $space_size;
+}
+
+.box-link {
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  h1, h2, h3, h4, h5 {
+    color: $link-colour;
+  }
+
+  &:hover {
+    border-color: $black;
+  }
+
+}
+
+.space-top-double {
+  margin-top: $space_size * 2;
+}
+
+.column-three-quarter {
+  @include grid-column(3 / 4);
+}
+
+.center {
+  text-align: center;
+}
+
+.color-text {
+  color: $text-colour;
+}

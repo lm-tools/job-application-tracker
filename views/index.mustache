@@ -1,10 +1,37 @@
 {{<layout}}
 
   {{$applicationContent}}
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
 
-    <input class="button" type="submit" value="Save and continue">
+    <h2 class="heading-xlarge">Track your applications</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque blanditiis, commodi distinctio earum eligendi ex inventore laborum molestiae nemo nihil numquam omnis pariatur quam ratione repellat similique sunt veritatis, voluptate?</p>
+
+    <a href="#" class="button">+ Add role</a>
+
+    <section class="space-top-double">
+      <ul>
+        {{#roles}}
+        <li class="box box-link">
+          <a href="#" >
+            <div class="grid-row">
+              <div class="column-three-quarter">
+                <h4 class="bold-small">
+                  {{title}}
+                </h4>
+                <p class="color-text">{{employer}}</p>
+              </div>
+              <div class="column-one-quarter color-text center">
+                {{status}}
+              </div>
+
+            </div>
+
+          </a>
+        </li>
+        {{/roles}}
+      </ul>
+    </section>
+
+
   {{/applicationContent}}
 
 {{/layout}}

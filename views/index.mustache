@@ -29,11 +29,13 @@
                 <input type="hidden" name="state" value="{{state}}">
 
                     {{stateQuestion}}
+
+                    {{#hasAction}}
                     <div>
                       <input type="submit" name="action" value="yes" class="button">
                       <input type="submit" name="action" value="no" class="button">
                     </div>
-
+                    {{/hasAction}}
               </form>
             </div>
           </div>

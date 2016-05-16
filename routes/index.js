@@ -6,8 +6,12 @@ var Stately = require('stately.js');
 
 
 var RolesView = function (roles) {
+  function hasAction(state) {
+    return jobApplicationStates[state].yes || jobApplicationStates[state].no;
+  }
+
   function formatStateQuestion(state) {
-    return _.capitalize(state.replace(/_/g, ' ')) + ' ?';
+    return _.capitalize(state.replace(/_/g, ' ')) + (hasAction(state) ? ' ?' : '');
   }
 
   function lookupStatus(state) {
@@ -43,7 +47,8 @@ var RolesView = function (roles) {
   return _.map(roles, function (role) {
     return _.extend({
       stateQuestion: formatStateQuestion(role.state),
-      status: lookupStatus(role.state)
+      status: lookupStatus(role.state),
+      hasAction: hasAction(role.state)
     }, role);
   });
 };

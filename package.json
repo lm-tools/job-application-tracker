@@ -8,6 +8,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "compile": "gulp css",
+    "watch": "gulp watch",
     "lint": "eslint .",
     "pretest": "npm-shrinkwrap-check && eslint .",
     "test": "NODE_ENV=test mocha && NODE_ENV=test cucumber.js",
@@ -27,6 +28,7 @@
     "govuk-elements-sass": "^1.1.4",
     "govuk_frontend_toolkit": "^4.10.0",
     "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.3.1",
     "hogan.js": "~3.0",
     "morgan": "~1.6",

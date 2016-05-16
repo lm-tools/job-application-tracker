@@ -10,6 +10,10 @@ $space_size: 10px;
   margin-bottom: $space_size;
 }
 
+.box-fixed-height {
+  min-height: 100px;
+}
+
 .box-link {
   text-decoration: none;
   cursor: pointer;

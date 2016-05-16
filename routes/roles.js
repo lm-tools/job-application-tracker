@@ -1,6 +1,8 @@
 var express = require('express');
+var jobApplicationStates = require('../lib/job_application_states');
 var router = new express.Router();
 var uuid = require('node-uuid');
+var Stately = require('stately.js');
 
 router.get('/', function index(req, res) {
   res.redirect('/roles/new');
@@ -17,7 +19,7 @@ router.post('/', function create(req, res) {
     id: uuid.v4(),
     title: req.body['role[title]'],
     employer: req.body['role[employer]'],
-    state: 'HAVE_YOU_DONE_EVERYTHING_YOU_NEED_TO_APPLY'
+    state: Stately.machine(jobApplicationStates).getMachineState()
   });
   res.redirect('/');
 });

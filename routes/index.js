@@ -11,7 +11,7 @@ var RolesView = function (roles) {
   }
 
   function formatStateQuestion(state) {
-    return _.capitalize(state.replace(/_/g, ' ')) + (hasAction(state) ? ' ?' : '');
+    return _.capitalize(state.replace(/_/g, ' ')) + (hasAction(state) ? '?' : '');
   }
 
   function lookupStatus(state) {

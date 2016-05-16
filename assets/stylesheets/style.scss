@@ -42,3 +42,18 @@ $space_size: 10px;
 .color-text {
   color: $text-colour;
 }
+
+.button-secondary{
+   @include button($grey-3);
+ }
+
+.action-buttons {
+  input.button {
+    margin-right: 15px;
+    margin-top: 10px;
+  }
+}
+
+.box-min-padding {
+  padding: (18px $gutter-half $gutter-half $gutter-half);
+}

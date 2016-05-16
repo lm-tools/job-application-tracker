@@ -11,6 +11,12 @@ var RolesView = function (roles) {
   }
 
   function formatStateQuestion(state) {
+    if (state.startsWith('ARE_YOU_STILL_INTERESTED')) {
+      return 'Are you still interested?';
+    }
+    if (state.startsWith('HAVE_YOU_TRIED_FOLLOWING_UP')) {
+      return 'Have you followed up?';
+    }
     return _.capitalize(state.replace(/_/g, ' ')) + (hasAction(state) ? '?' : '');
   }
 

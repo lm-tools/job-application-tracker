@@ -23,16 +23,16 @@
               </a>
             </div>
             <div class="column-one-quarter">
-              <form method="POST" class="box box-fixed-height">
+              <form method="POST" class="box box-fixed-height box-min-padding center">
                 <input type="hidden" name="id" value="{{id}}">
                 <input type="hidden" name="state" value="{{state}}">
 
                     {{stateQuestion}}
 
                     {{#hasAction}}
-                    <div>
-                      <input type="submit" name="action" value="yes" class="button">
-                      <input type="submit" name="action" value="no" class="button">
+                    <div class="action-buttons center">
+                      <input type="submit" name="action" value="yes" class="button button-secondary">
+                      <input type="submit" name="action" value="no" class="button button-secondary">
                     </div>
                     {{/hasAction}}
               </form>

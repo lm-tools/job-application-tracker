@@ -11,6 +11,12 @@ var RolesView = function (roles) {
   }
 
   function formatStateQuestion(state) {
+    if (state.startsWith('ARE_YOU_STILL_INTERESTED')) {
+      return 'Are you still interested?';
+    }
+    if (state.startsWith('HAVE_YOU_TRIED_FOLLOWING_UP')) {
+      return 'Have you followed up?';
+    }
     return _.capitalize(state.replace(/_/g, ' ')) + (hasAction(state) ? '?' : '');
   }
 
@@ -35,7 +41,7 @@ var RolesView = function (roles) {
       case 'HAVE_YOU_RECEIVED_A_JOB_OFFER':
       case 'ARE_YOU_STILL_INTERESTED_IN_RECEIVING_AN_OFFER':
       case 'HAVE_YOU_TRIED_FOLLOWING_UP_ABOUT_RECEIVING_AN_OFFER':
-        return 'Interviewing';
+        return 'Interview';
 
       case 'SUCCESS':
         return 'Success';

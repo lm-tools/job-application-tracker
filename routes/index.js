@@ -6,8 +6,8 @@ var Stately = require('stately.js');
 
 var RolesView = function (roles) {
   function hasAction(state) {
-    return typeof(jobApplicationStates[state].yes) != 'undefined' ||
-           typeof(jobApplicationStates[state].no) != 'undefined';
+    return typeof(jobApplicationStates[state].yes) !== 'undefined' ||
+           typeof(jobApplicationStates[state].no) !== 'undefined';
   }
 
   function formatStateQuestion(state) {

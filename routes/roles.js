@@ -1,5 +1,6 @@
 var express = require('express');
 var router = new express.Router();
+var uuid = require('node-uuid');
 
 router.get('/', function index(req, res) {
   res.redirect('/roles/new');
@@ -13,9 +14,10 @@ router.post('/', function create(req, res) {
   /* eslint no-param-reassign: "off" */
   req.session.roles = req.session.roles || [];
   req.session.roles.push({
+    id: uuid.v4(),
     title: req.body['role[title]'],
     employer: req.body['role[employer]'],
-    status: 'Interested'
+    state: 'HAVE_YOU_DONE_EVERYTHING_YOU_NEED_TO_APPLY'
   });
   res.redirect('/');
 });

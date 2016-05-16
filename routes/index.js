@@ -41,7 +41,7 @@ var RolesView = function (roles) {
       case 'HAVE_YOU_RECEIVED_A_JOB_OFFER':
       case 'ARE_YOU_STILL_INTERESTED_IN_RECEIVING_AN_OFFER':
       case 'HAVE_YOU_TRIED_FOLLOWING_UP_ABOUT_RECEIVING_AN_OFFER':
-        return 'Interviewing';
+        return 'Interview';
 
       case 'SUCCESS':
         return 'Success';

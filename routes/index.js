@@ -4,10 +4,10 @@ var jobApplicationStates = require('../lib/job_application_states');
 var router = new express.Router();
 var Stately = require('stately.js');
 
-
 var RolesView = function (roles) {
   function hasAction(state) {
-    return jobApplicationStates[state].yes || jobApplicationStates[state].no;
+    return typeof(jobApplicationStates[state].yes) != 'undefined' ||
+           typeof(jobApplicationStates[state].no) != 'undefined';
   }
 
   function formatStateQuestion(state) {

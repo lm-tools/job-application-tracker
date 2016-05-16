@@ -15,7 +15,7 @@ router.get('/new', function newRole(req, res) {
 router.post('/', function create(req, res) {
   /* eslint no-param-reassign: "off" */
   req.session.roles = req.session.roles || [];
-  req.session.roles.push({
+  req.session.roles.unshift({
     id: uuid.v4(),
     title: req.body['role[title]'],
     employer: req.body['role[employer]'],

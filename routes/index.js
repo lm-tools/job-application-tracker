@@ -8,4 +8,10 @@ router.get('/', function index(req, res) {
   });
 });
 
+router.post('/', function progressApplication(req, res) {
+  // TODO: 1. Progress job application
+  //       2. Update roles state in session
+  res.redirect('/');
+});
+
 module.exports = router;

@@ -1,4 +1,6 @@
-# Job-application-tracker
+# Job-application-tracker - deprecated
+
+*This project is no longer maintained*
 
 [![Build status][build status image]][ci]
 
